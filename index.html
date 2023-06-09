@@ -14,13 +14,11 @@
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
                         this.vid.play();
-                        this.vid.muted = false;
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
                         this.vid.pause();
-                        this.vid.muted = true;
 
                     }.bind(this));
                 },
@@ -47,7 +45,7 @@
                     crossorigin
                     webkit-playsinline
                     autoplay
-                    muted
+                    muted="true"
                     playsinline
                 ></video>
             </a-assets>
